@@ -3,14 +3,27 @@
         <title>Map Helper</title>
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
         <style>
-            table {
-                border-collapse: collapse;
-            }
-            tr, td {
-                border: 1px solid black;
-                height: 50px;
-                width: 47px;
-            }
+			td {
+				width: 45px;
+			}
+            #map {
+				float: left;
+			}
+			#modal {
+				width: 82%;
+				height: 100%;
+				z-index: 100;
+				background-color: white;
+				position: absolute;
+			}
+			#doneBtn {
+				left: 250px;
+				position: absolute;
+				top: 280px;
+			}
+			.title {
+				font-weight: bold;
+			}
             .playerInfo {
                 position: absolute;
                 right: 5px;
@@ -60,260 +73,47 @@
         <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     </head>
     <body>
-        <table>
-            <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-
+        <img id="map" src="map.png"/>
+		
+		<div id="modal">
+			<span>Player Name:</span>
+			<input id="name" type="text"/></br></br>
+			<span>Player ID:</span>
+			<input id="id" type="text"/></br></br>
+			<span>AC:</span>
+			<input id="ac" type="text"/></br></br>
+			<span>HP:</span>
+			<input id="hp" type="text"/></br></br>
+			<button type="button" onclick="javascript:addPl($('#name').val(), $('#id').val(), $('#ac').val(), $('#hp').val());">Add Player</button>
+			</br>
+			<button id="doneBtn" type="button" onclick="javascript:hideAndInitObjs()">Done</button>
+		</div>
+		
         <div id="playerAndHP" class="playerInfo">
-            <input type="text" class="plInfo" /><br />
-            <input type="text" class="plInfo" /><br />
-            <input type="text" class="plInfo" /><br />
-            <input type="text" class="plInfo" /><br />
-            <input type="text" class="plInfo" /><br />
-            <input type="text" class="plInfo" />
+			<table id="playerTbl">
+				<tr>
+					<td class="title">Name</td>
+					<td class="title">ID</td>
+					<td class="title">AC</td>
+					<td class="title">HP</td>
+				</tr>
+			</table>
         </div>
 
-        <div class="playables">
-            <div class="offset">Players</div>
-            <div id="draggable1" class="box player">pl 1</div>
-            <div id="draggable2" class="box player">pl 2</div>
-            <div id="draggable3" class="box player">pl 3</div>
-            <div id="draggable4" class="box player">pl 4</div>
-            <div id="draggable5" class="box player">pl 5</div>
-            <div id="draggable6" class="box player">pl 6</div>
+        <div id="playersDiv" class="playables">
+            <div class="offset">&nbsp;Players</div>
         </div>
 
         <div class="playables">
             <div class="offset">Monsters</div>
-            <div id="mon1" class="box monster">X</div>
-            <div id="mon2" class="box monster">X</div>
-            <div id="mon3" class="box monster">X</div>
-            <div id="mon4" class="box monster">X</div>
-            <div id="mon5" class="box monster">X</div>
-            <div id="mon6" class="box monster">X</div>
-            <div id="mon7" class="box monster">X</div>
-            <div id="mon8" class="box monster">X</div>
+            <div id="mon1" class="box monster">X1</div>
+            <div id="mon2" class="box monster">X2</div>
+            <div id="mon3" class="box monster">X3</div>
+            <div id="mon4" class="box monster">X4</div>
+            <div id="mon5" class="box monster">X5</div>
+            <div id="mon6" class="box monster">X6</div>
+            <div id="mon7" class="box monster">X7</div>
+            <div id="mon8" class="box monster">X8</div>
         </div>
 
         <div class="playables">
@@ -374,9 +174,32 @@
 
         <script type="text/javascript">
             var arr = [50, 50];
-
-            $(function () {
-                $("#draggable1, #draggable2, #draggable3, #draggable4, #draggable5, #draggable6").draggable({ grid: arr })
+			var plNum = 0;
+			
+			function addPl(name, id, ac, hp) {
+				html = "<tr><td style='margin-right: 10px;'>" + name + "</td><td style='margin-right: 10px;'>" + id + "</td><td style='margin-right: 10px;'>" + ac + "</td><td><input type='text' value='" + hp + "'/></td></tr>";
+			
+				document.getElementById("playerTbl").innerHTML += html;
+				
+				
+				htmlDraggables = "<div id='draggable" + plNum + "' class='box player'>" + id + "</div>";
+				document.getElementById("playersDiv").innerHTML += htmlDraggables;
+				
+				$('#name').val("");
+				$('#id').val("");
+				$('#ac').val("");
+				$('#hp').val("");
+			
+				plNum++;
+			}
+			
+			
+			function hideAndInitObjs() {
+				document.getElementById('modal').style.display = 'none';
+				
+				for(var i = 0; i < plNum; i++) {
+					$("#draggable" + i).draggable({ grid: arr })
+				}
 
                 $("#mon1, #mon2, #mon3, #mon4, #mon5, #mon6, #mon7, #mon8").draggable({ grid: arr })
 
@@ -387,10 +210,7 @@
                 $("#sceng1, #sceng2, #sceng3, #sceng4, #sceng5, #sceng6, #sceng7, #sceng8, #sceng9, #sceng10").draggable({ grid: arr })
 
                 $("#scenw1, #scenw2, #scenw3, #scenw4, #scenw5, #scenw6, #scenw7, #scenw8, #scenw9, #scenw10").draggable({ grid: arr })
-            });
+			}
         </script>
     </body>
 </html>
-
-<!--drag n drop inside a table
-text boxes for person and hp-->
