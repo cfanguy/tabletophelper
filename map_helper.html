@@ -49,6 +49,26 @@
                 height: 48px;
                 width: 48px;
             }
+            .large {
+                border: 1px solid black;
+                height: 98px;
+                width: 98px;
+            }
+            .huge {
+                border: 1px solid black;
+                height: 148px;
+                width: 148px;
+            }
+            .gargantuan {
+                border: 1px solid black;
+                height: 198px;
+                width: 198px;
+            }
+            .colossal {
+                border: 1px solid black;
+                height: 298px;
+                width: 298px;
+            }
             .border {
                 background-color: black;
             }
@@ -114,6 +134,11 @@
             <div id="mon6" class="box monster">X6</div>
             <div id="mon7" class="box monster">X7</div>
             <div id="mon8" class="box monster">X8</div>
+
+            <div id="largeMonster" class="monster large">Large</div>
+            <div id="hugeMonster" class="monster huge">Huge</div>
+            <div id="gargMonster" class="monster gargantuan">Gargantuan</div>
+            <div id="colMonster" class="monster colossal">Colossal</div>
         </div>
 
         <div class="playables">
@@ -142,6 +167,7 @@
             <div id="scend3" class="scenery door"></div>
             <div id="scend4" class="scenery door"></div>
             <div id="scend5" class="scenery door"></div>
+
         </div>
 
         <div class="playables">
@@ -210,6 +236,8 @@
                 $("#sceng1, #sceng2, #sceng3, #sceng4, #sceng5, #sceng6, #sceng7, #sceng8, #sceng9, #sceng10").draggable({ grid: arr })
 
                 $("#scenw1, #scenw2, #scenw3, #scenw4, #scenw5, #scenw6, #scenw7, #scenw8, #scenw9, #scenw10").draggable({ grid: arr })
+
+                $("#largeMonster, #hugeMonster, #gargMonster, #colMonster").draggable({ grid: arr })
 			}
         </script>
     </body>
