@@ -13,99 +13,108 @@
             <img id="map" src="images/map.png"/>
         </div>
 		
-		<div id="modal">
-			<span>Player Name:</span>
-			<input id="name" type="text"/><br><br>
-			<span>Player ID:</span>
-			<input id="id" type="text"/><br><br>
-			<span>AC:</span>
-			<input id="ac" type="text"/><br><br>
-			<span>HP:</span>
-			<input id="hp" type="text"/><br><br>
-			<button type="button" onclick="javascript:addPl($('#name').val(), $('#id').val(), $('#ac').val(), $('#hp').val());">Add Player</button>
-			<br>
-			<button id="doneBtn" type="button" onclick="javascript:hideAndInitObjs()">Done</button>
-		</div>
+		<div id="playerModal" class="modal">
+            <div class="innerModal">
+                <span class="title">Player Information:</span><br><br>
+                <span>Player Name:</span>
+                <input id="name" type="text"/><br><br>
+                <span>Player ID:</span>
+                <input id="id" type="text"/><br><br>
+                <span>AC:</span>
+                <input id="ac" type="text"/><br><br>
+                <span>HP:</span>
+                <input id="hp" type="text"/><br><br>
+                <button type="button" onclick="javascript:addPl($('#name').val(), $('#id').val(), $('#ac').val(), $('#hp').val());">Add Player</button>
+                <br>
+                <button id="donePlBtn" class="doneBtn" type="button" onclick="javascript:hideAndInitObjs()">Done</button>
+            </div>
+        </div>
+        
+        <div id="monsterModal" class="modal" style="display: none;">
+            <div class="innerModal">
+                <span class="title">Select a Monster Size:</span>
+                <select id="monsterSelection">
+                    <option>normal</option>
+                    <option>large</option>
+                    <option>huge</option>
+                    <option>gargantuan</option>
+                    <option>colossal</option>
+                </select>
+                <br>
+                <button id="doneMonBtn" class="doneBtn"  type="button" onclick="javascript:createAndInitMonster()">Done</button>
+            </div>
+        </div>
 
         <div id="playersDiv" class="playables">
             <div class="offset">&nbsp;Players</div>
         </div>
 
-        <div class="playables">
+        <div id="monsters" class="playables">
             <div class="offset">Monsters</div>
-            <div id="mon1" class="box monster">X1</div>
-            <div id="mon2" class="box monster">X2</div>
-            <div id="mon3" class="box monster">X3</div>
-            <div id="mon4" class="box monster">X4</div>
-            <div id="mon5" class="box monster">X5</div>
-            <div id="mon6" class="box monster">X6</div>
-            <div id="mon7" class="box monster">X7</div>
-            <div id="mon8" class="box monster">X8</div>
+            <div class="box monster">X1</div>
+            <div class="box monster">X2</div>
+            <div class="box monster">X3</div>
+            <div class="box monster">X4</div>
+            <div class="box monster">X5</div>
+            <div class="box monster">X6</div>
 
-            <div id="largeMonster" class="monster large">Large</div>
-            <div id="hugeMonster" class="monster huge">Huge</div>
-            <div id="gargMonster" class="monster gargantuan">Gargantuan</div>
-            <div id="colMonster" class="monster colossal">Colossal</div>
+            <div class="monster large">Large</div>
         </div>
 
         <div class="playables">
             <div class="offset">Scenery<br />Border</div>
-            <div id="scenb1" class="scenery border"></div>
-            <div id="scenb2" class="scenery border"></div>
-            <div id="scenb3" class="scenery border"></div>
-            <div id="scenb4" class="scenery border"></div>
-            <div id="scenb5" class="scenery border"></div>
-            <div id="scenb6" class="scenery border"></div>
-            <div id="scenb7" class="scenery border"></div>
-            <div id="scenb8" class="scenery border"></div>
-            <div id="scenb9" class="scenery border"></div>
-            <div id="scenb10" class="scenery border"></div>
-            <div id="scenb11" class="scenery border"></div>
-            <div id="scenb12" class="scenery border"></div>
-            <div id="scenb13" class="scenery border"></div>
-            <div id="scenb14" class="scenery border"></div>
-            <div id="scenb15" class="scenery border"></div>
+            <div class="scenery border"></div>
+            <div class="scenery border"></div>
+            <div class="scenery border"></div>
+            <div class="scenery border"></div>
+            <div class="scenery border"></div>
+            <div class="scenery border"></div>
+            <div class="scenery border"></div>
+            <div class="scenery border"></div>
+            <div class="scenery border"></div>
+            <div class="scenery border"></div>
         </div>
 
         <div class="playables">
             <div class="offset">Scenery<br />Doorway</div>
-            <div id="scend1" class="scenery door"></div>
-            <div id="scend2" class="scenery door"></div>
-            <div id="scend3" class="scenery door"></div>
-            <div id="scend4" class="scenery door"></div>
-            <div id="scend5" class="scenery door"></div>
+            <div class="scenery door"></div>
+            <div class="scenery door"></div>
+            <div class="scenery door"></div>
+            <div class="scenery door"></div>
+            <div class="scenery door"></div>
 
         </div>
 
         <div class="playables">
             <div class="offset">Scenery<br />Greenery</div>
-            <div id="sceng1" class="scenery green"></div>
-            <div id="sceng2" class="scenery green"></div>
-            <div id="sceng3" class="scenery green"></div>
-            <div id="sceng4" class="scenery green"></div>
-            <div id="sceng5" class="scenery green"></div>
-            <div id="sceng6" class="scenery green"></div>
-            <div id="sceng7" class="scenery green"></div>
-            <div id="sceng8" class="scenery green"></div>
-            <div id="sceng9" class="scenery green"></div>
-            <div id="sceng10" class="scenery green"></div>
+            <div class="scenery green"></div>
+            <div class="scenery green"></div>
+            <div class="scenery green"></div>
+            <div class="scenery green"></div>
+            <div class="scenery green"></div>
+            <div class="scenery green"></div>
+            <div class="scenery green"></div>
+            <div class="scenery green"></div>
+            <div class="scenery green"></div>
+            <div class="scenery green"></div>
         </div>
 
         <div class="playables">
             <div class="offset">Scenery<br />Water</div>
-            <div id="scenw1" class="scenery water"></div>
-            <div id="scenw2" class="scenery water"></div>
-            <div id="scenw3" class="scenery water"></div>
-            <div id="scenw4" class="scenery water"></div>
-            <div id="scenw5" class="scenery water"></div>
-            <div id="scenw6" class="scenery water"></div>
-            <div id="scenw7" class="scenery water"></div>
-            <div id="scenw8" class="scenery water"></div>
-            <div id="scenw9" class="scenery water"></div>
-            <div id="scenw10" class="scenery water"></div>
+            <div class="scenery water"></div>
+            <div class="scenery water"></div>
+            <div class="scenery water"></div>
+            <div class="scenery water"></div>
+            <div class="scenery water"></div>
+            <div class="scenery water"></div>
+            <div class="scenery water"></div>
+            <div class="scenery water"></div>
+            <div class="scenery water"></div>
+            <div class="scenery water"></div>
         </div>
         
         <div id="playerAndHP" class="playerInfo">
+            <div>Draggable Window</div>
 			<table id="playerTbl">
 				<tr>
 					<td class="title">Name</td>
@@ -113,7 +122,11 @@
 					<td class="title">AC</td>
 					<td class="title">HP</td>
 				</tr>
-			</table>
+            </table>
+            
+            <br>
+            <button onclick="addMonster();">Add Monster</button>
         </div>
+
     </body>
 </html>
