@@ -31,7 +31,7 @@ function addPl(name, id, ac, hp) {
 function hideAndInitObjs() {
     document.getElementById('playerModal').style.display = 'none';
 
-    $("div[id^='draggable'], .scenery, #playerAndHP").draggable({
+    $(".scenery, .player, .monster").draggable({
         grid: arr
     });
 }
