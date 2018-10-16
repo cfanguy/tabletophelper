@@ -1,111 +1,27 @@
 <html>
     <head>
         <title>Map Helper</title>
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-        <style>
-			td {
-				width: 45px;
-			}
-            #map {
-				float: left;
-			}
-			#modal {
-				width: 82%;
-				height: 100%;
-				z-index: 100;
-				background-color: white;
-				position: absolute;
-			}
-			#doneBtn {
-				left: 250px;
-				position: absolute;
-				top: 280px;
-			}
-			.title {
-				font-weight: bold;
-			}
-            .playerInfo {
-                position: absolute;
-                right: 5px;
-                top: 10px;
-            }
-            .plInfo {
-                margin-bottom: 25px;
-            }
-            .box {
-                border: 1px solid black;
-                height: 48px;
-                width: 48px;
-                text-align: center;
-            }
-            .player {
-                background-color: orange;
-            }
-            .monster {
-                background-color: gainsboro;
-            }
-            .scenery {
-                border: 1px solid black;
-                height: 48px;
-                width: 48px;
-            }
-            .large {
-                border: 1px solid black;
-                height: 98px;
-                width: 98px;
-            }
-            .huge {
-                border: 1px solid black;
-                height: 148px;
-                width: 148px;
-            }
-            .gargantuan {
-                border: 1px solid black;
-                height: 198px;
-                width: 198px;
-            }
-            .colossal {
-                border: 1px solid black;
-                height: 298px;
-                width: 298px;
-            }
-            .border {
-                background-color: black;
-            }
-            .door {
-                background-color: saddlebrown;
-            }
-            .green {
-                background-color: green;
-            }
-            .water {
-                background-color: blue;
-            }
-            .offset {
-                height: 50px;
-            }
-            .playables {
-                width: 100px;
-                float: left;
-            }
-        </style>
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.8.21//themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/jquery.ui.touch-punch.min.js"></script>
     </head>
     <body>
-        <img id="map" src="map.png"/>
+        <img id="map" src="images/map.png"/>
 		
 		<div id="modal">
 			<span>Player Name:</span>
-			<input id="name" type="text"/></br></br>
+			<input id="name" type="text"/><br><br>
 			<span>Player ID:</span>
-			<input id="id" type="text"/></br></br>
+			<input id="id" type="text"/><br><br>
 			<span>AC:</span>
-			<input id="ac" type="text"/></br></br>
+			<input id="ac" type="text"/><br><br>
 			<span>HP:</span>
-			<input id="hp" type="text"/></br></br>
+			<input id="hp" type="text"/><br><br>
 			<button type="button" onclick="javascript:addPl($('#name').val(), $('#id').val(), $('#ac').val(), $('#hp').val());">Add Player</button>
-			</br>
+			<br>
 			<button id="doneBtn" type="button" onclick="javascript:hideAndInitObjs()">Done</button>
 		</div>
 		
@@ -197,48 +113,5 @@
             <div id="scenw9" class="scenery water"></div>
             <div id="scenw10" class="scenery water"></div>
         </div>
-
-        <script type="text/javascript">
-            var arr = [50, 50];
-			var plNum = 0;
-			
-			function addPl(name, id, ac, hp) {
-				html = "<tr><td style='margin-right: 10px;'>" + name + "</td><td style='margin-right: 10px;'>" + id + "</td><td style='margin-right: 10px;'>" + ac + "</td><td><input type='text' value='" + hp + "'/></td></tr>";
-			
-				document.getElementById("playerTbl").innerHTML += html;
-				
-				
-				htmlDraggables = "<div id='draggable" + plNum + "' class='box player'>" + id + "</div>";
-				document.getElementById("playersDiv").innerHTML += htmlDraggables;
-				
-				$('#name').val("");
-				$('#id').val("");
-				$('#ac').val("");
-				$('#hp').val("");
-			
-				plNum++;
-			}
-			
-			
-			function hideAndInitObjs() {
-				document.getElementById('modal').style.display = 'none';
-				
-				for(var i = 0; i < plNum; i++) {
-					$("#draggable" + i).draggable({ grid: arr })
-				}
-
-                $("#mon1, #mon2, #mon3, #mon4, #mon5, #mon6, #mon7, #mon8").draggable({ grid: arr })
-
-                $("#scenb1, #scenb2, #scenb3, #scenb4, #scenb5, #scenb6, #scenb7, #scenb8, #scenb9, #scenb10, #scenb11, #scenb12, #scenb13, #scenb14, #scenb15").draggable({ grid: arr })
-
-                $("#scend1, #scend2, #scend3, #scend4, #scend5").draggable({ grid: arr })
-
-                $("#sceng1, #sceng2, #sceng3, #sceng4, #sceng5, #sceng6, #sceng7, #sceng8, #sceng9, #sceng10").draggable({ grid: arr })
-
-                $("#scenw1, #scenw2, #scenw3, #scenw4, #scenw5, #scenw6, #scenw7, #scenw8, #scenw9, #scenw10").draggable({ grid: arr })
-
-                $("#largeMonster, #hugeMonster, #gargMonster, #colMonster").draggable({ grid: arr })
-			}
-        </script>
     </body>
 </html>

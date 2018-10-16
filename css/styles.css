@@ -1,0 +1,85 @@
+td {
+    width: 45px;
+}
+#map {
+    float: left;
+}
+#modal {
+    width: 82%;
+    height: 100%;
+    z-index: 100;
+    background-color: white;
+    position: absolute;
+}
+#doneBtn {
+    left: 250px;
+    position: absolute;
+    top: 280px;
+}
+.title {
+    font-weight: bold;
+}
+.playerInfo {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+.plInfo {
+    margin-bottom: 25px;
+}
+.box {
+    border: 1px solid black;
+    height: 48px;
+    width: 48px;
+    text-align: center;
+}
+.player {
+    background-color: orange;
+}
+.monster {
+    background-color: gainsboro;
+}
+.scenery {
+    border: 1px solid black;
+    height: 48px;
+    width: 48px;
+}
+.large {
+    border: 1px solid black;
+    height: 98px;
+    width: 98px;
+}
+.huge {
+    border: 1px solid black;
+    height: 148px;
+    width: 148px;
+}
+.gargantuan {
+    border: 1px solid black;
+    height: 198px;
+    width: 198px;
+}
+.colossal {
+    border: 1px solid black;
+    height: 298px;
+    width: 298px;
+}
+.border {
+    background-color: black;
+}
+.door {
+    background-color: saddlebrown;
+}
+.green {
+    background-color: green;
+}
+.water {
+    background-color: blue;
+}
+.offset {
+    height: 50px;
+}
+.playables {
+    width: 100px;
+    float: left;
+}
