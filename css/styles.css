@@ -63,14 +63,17 @@ table, th, td {
 }
 .player {
     background-color: orange;
+    z-index: 80;
 }
 .monster {
     background-color: gainsboro;
+    z-index: 80;
 }
 .scenery {
     border: 1px solid black;
     height: 48px;
     width: 48px;
+    z-index: 40;
 }
 .large {
     border: 1px solid black;
