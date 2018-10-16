@@ -9,7 +9,9 @@
         <script src="js/jquery.ui.touch-punch.min.js"></script>
     </head>
     <body>
-        <img id="map" src="images/map.png"/>
+        <div>
+            <img id="map" src="images/map.png"/>
+        </div>
 		
 		<div id="modal">
 			<span>Player Name:</span>
@@ -24,17 +26,6 @@
 			<br>
 			<button id="doneBtn" type="button" onclick="javascript:hideAndInitObjs()">Done</button>
 		</div>
-		
-        <div id="playerAndHP" class="playerInfo">
-			<table id="playerTbl">
-				<tr>
-					<td class="title">Name</td>
-					<td class="title">ID</td>
-					<td class="title">AC</td>
-					<td class="title">HP</td>
-				</tr>
-			</table>
-        </div>
 
         <div id="playersDiv" class="playables">
             <div class="offset">&nbsp;Players</div>
@@ -112,6 +103,17 @@
             <div id="scenw8" class="scenery water"></div>
             <div id="scenw9" class="scenery water"></div>
             <div id="scenw10" class="scenery water"></div>
+        </div>
+        
+        <div id="playerAndHP" class="playerInfo">
+			<table id="playerTbl">
+				<tr>
+					<td class="title">Name</td>
+					<td class="title">ID</td>
+					<td class="title">AC</td>
+					<td class="title">HP</td>
+				</tr>
+			</table>
         </div>
     </body>
 </html>

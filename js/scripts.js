@@ -1,4 +1,4 @@
-var arr = [50, 50];
+var arr = [10, 10];
 var plNum = 0;
 
 function addPl(name, id, ac, hp) {

@@ -5,8 +5,8 @@ td {
     float: left;
 }
 #modal {
-    width: 82%;
-    height: 100%;
+    width: 75%;
+    height: 75%;
     z-index: 100;
     background-color: white;
     position: absolute;
@@ -20,7 +20,6 @@ td {
     font-weight: bold;
 }
 .playerInfo {
-    position: absolute;
     right: 5px;
     top: 10px;
 }
